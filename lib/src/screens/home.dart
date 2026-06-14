@@ -55,6 +55,9 @@ class _HomeState extends State<Home> {
                     cancelTap: () {
                       Navigator.pop(context);
                     },
+                    hideTap: (){
+                      
+                    },
                   );
                 },
               );
