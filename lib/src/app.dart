@@ -3,7 +3,8 @@ import 'screens/intro.dart';
 import 'screens/auth/register.dart';
 import 'screens/home.dart';
 
-class MyApp extends StatelessWidget{
+// app.dart
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Practice',
+      home: const Home(), // ← 이렇게 변경
       routes: {
-        '/': (context) => const Home(),
-        '/intro':(context) => const Intro(),
+        '/intro': (context) => const Intro(),
         '/register': (context) => const Register(),
       },
-      initialRoute: '/',
+      // initialRoute: '/' ← 이 줄 삭제
     );
   }
 }

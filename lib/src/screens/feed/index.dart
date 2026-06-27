@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:carrot_flutter/src/widgets/listitems/feed_list_item.dart';
 import 'package:carrot_flutter/src/widgets/buttons/category_buttton.dart';
 
 class FeedIndex extends StatefulWidget{
@@ -39,6 +40,15 @@ class _FeedIndexState extends State<FeedIndex>{
               ],
             ),
             ),
+            Expanded(child: ListView(
+              children: [
+                FeedListItem(),
+                FeedListItem(),
+                FeedListItem(),
+                FeedListItem(),
+                FeedListItem(),
+              ],
+            ))
         ],
       ),
     );

@@ -13,9 +13,11 @@ class FeedListItem extends StatelessWidget{
       onTap: () {},
       child: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
         children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
           ClipRRect(
             borderRadius: BorderRadiusGeometry.circular(10.0),
             child: Image.network("https://example.com/image.jpg",width: _imageSize, height: _imageSize, fit: BoxFit.cover,),
@@ -37,6 +39,27 @@ class FeedListItem extends StatelessWidget{
               ),
               ),
               IconButton(onPressed: (){}, icon: const Icon(Icons.more_vert,color: Colors.grey,size:16,),),
+        ],
+          ),
+          Positioned(
+        right: 10,
+        bottom: 0,
+        child: Row(
+          children: [
+            Icon(
+              Icons.chat_bubble_outline,
+              color: Colors.grey,
+              size: 16,
+            ),
+            SizedBox(width: 2),
+            Text('1',style: TextStyle(color: Colors.grey)),
+            SizedBox(width: 4),
+            Icon(Icons.favorite_border,color: Colors.grey,size: 16,),
+            SizedBox(width: 2),
+            Text('1',style:TextStyle(color:Colors.grey)),
+          ],
+        ),
+       ),
         ],
       ),
       ),
